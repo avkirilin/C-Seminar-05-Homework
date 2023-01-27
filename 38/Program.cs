@@ -5,13 +5,13 @@ double[] GetRandomArray(int size)      //метод получения масс�
     double[] result = new double[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(-99, 100) + new Random().NextDouble();
+        result[i] = Math.Round((new Random().Next(-99, 100) + new Random().NextDouble()), 2);
     }
     return result;
 }
 void PrintArray(double[] array)                           //метод выведения значений на экран
 {
-    Console.WriteLine($"[{String.Join(", ", array)}]");   //не смог разобраться как в этом случае вывести отформатированное число до определенного знака после запятой
+    Console.WriteLine($"[{String.Join(", ", array)}]");   
 }
 double MinMagnitude(double[] array)                       //метод поиска минимального вещественного числа в массиве
 {
